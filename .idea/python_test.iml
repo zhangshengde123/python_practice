@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/auto-testcase/TestCase" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/auto-testcase/page" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/auto-testcase/Test_Suite" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习代码/外星人入侵" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习代码/外星人入侵2" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/macaca-test/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.8 (web自动化测试用例)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
+    <option name="myDocStringFormat" value="Plain" />
+  </component>
+</module>

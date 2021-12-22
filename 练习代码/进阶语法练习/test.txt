@@ -1,0 +1,5 @@
+The Zen of Python
+
+Beautiful is better than ugly
+
+Simple is better than complex

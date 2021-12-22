@@ -1,0 +1,8 @@
+2021-10-11 15:29:35,795 - logging.log - ERROR - error message!
+2021-10-11 15:29:35,795 - logging.log - CRITICAL - critical message!
+2021-10-11 15:30:28,895 - logging.log - ERROR - error message!
+2021-10-11 15:30:28,895 - logging.log - CRITICAL - critical message!
+2021-10-11 16:16:22,606 - logging.log - ERROR - error message!
+2021-10-11 16:16:22,606 - logging.log - CRITICAL - critical message!
+2021-10-11 16:29:56,199 - logging.log - ERROR - error message!
+2021-10-11 16:29:56,199 - logging.log - CRITICAL - critical message!
