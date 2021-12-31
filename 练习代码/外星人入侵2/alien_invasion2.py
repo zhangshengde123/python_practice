@@ -7,7 +7,6 @@ import game_functions2 as gf
 from pygame.sprite import Group
 
 
-
 def game_run():
 
     pygame.init()
@@ -29,7 +28,7 @@ def game_run():
         #         sys.exit()
         #
         pygame.display.flip()
-        gf.check_events(ship)
+        gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
         bullets.update()
         gf.update_screen(ai_settings, screen, ship, bullets, aliens)
