@@ -10,8 +10,9 @@ class Setting():
         #外星人偏移
         self.fleet_edge = 2
 
-        #子弹配置
+        #子弹设置
         self.bullet_width = 2
         self.bullet_height = 3
         self.bullet_color = 60, 60, 60
         self.bullet_speed_factor = 1
+        self.bullet_allowed = 5
