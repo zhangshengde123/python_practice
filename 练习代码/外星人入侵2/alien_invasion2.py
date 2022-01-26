@@ -3,6 +3,7 @@ import sys
 from settings2 import Setting
 from ship2 import Ship
 from alien2 import Alien
+from  game_stats import GameStats
 import game_functions2 as gf
 from pygame.sprite import Group
 
@@ -18,7 +19,8 @@ def game_run():
     #alien = Alien(ai_settings, screen)
     bullets = Group()
     aliens = Group()
-    gf.create_fleet(ai_settings, screen, aliens)
+    gf.create_fleet(ai_settings, screen, ship, aliens)
+    stats = GameStats(ai_settings)
 
     while True:
         # screen.fill(ai_settings.bg_color)                #填充背景颜色
@@ -29,11 +31,13 @@ def game_run():
         #
         pygame.display.flip()
         gf.check_events(ai_settings, screen, ship, bullets)
-        ship.update()
-        bullets.update()
-        #  删除 消失的子弹
-        gf.bullet_update(bullets)
-        print(bullets)
+        if stats.game_active:
+            ship.update()
+            bullets.update()
+            #  删除 消失的子弹
+            gf.bullet_update(ai_settings, screen, ship, aliens, bullets)
+            #print(bullets)
+            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
 
         gf.update_screen(ai_settings, screen, ship, bullets, aliens)
 
