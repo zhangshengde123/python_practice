@@ -3,7 +3,9 @@ import sys
 from settings2 import Setting
 from ship2 import Ship
 from alien2 import Alien
-from  game_stats import GameStats
+from button2 import Button
+from scoreboard2 import Scoreboard
+from  game_stats2 import GameStats
 import game_functions2 as gf
 from pygame.sprite import Group
 
@@ -21,6 +23,9 @@ def game_run():
     aliens = Group()
     gf.create_fleet(ai_settings, screen, ship, aliens)
     stats = GameStats(ai_settings)
+    play_button = Button(ai_settings, screen, "Play")
+    sb = Scoreboard(ai_settings, screen, stats)
+
 
     while True:
         # screen.fill(ai_settings.bg_color)                #填充背景颜色
@@ -30,16 +35,17 @@ def game_run():
         #         sys.exit()
         #
         pygame.display.flip()
-        gf.check_events(ai_settings, screen, ship, bullets)
+        gf.check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bullets)
         if stats.game_active:
             ship.update()
             bullets.update()
             #  删除 消失的子弹
-            gf.bullet_update(ai_settings, screen, ship, aliens, bullets)
+            gf.bullet_update(ai_settings, screen, stats, ship, aliens, bullets, sb)
             #print(bullets)
-            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
+            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets, sb)
 
-        gf.update_screen(ai_settings, screen, ship, bullets, aliens)
+        gf.update_screen(ai_settings, screen, stats, ship, bullets, aliens, play_button, sb)
+
 
 
 

@@ -434,6 +434,7 @@ def check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bull
             check_play_button(ai_settings, screen, stats, sb, play_button, ship, aliens, bullets, mouse_x, mouse_y)
 
 
+
 def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button):
     """ 更新屏幕上的图像，并切换到新屏幕"""
     # 每次循环时都会重绘屏幕
